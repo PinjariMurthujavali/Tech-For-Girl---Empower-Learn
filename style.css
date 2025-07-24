@@ -1,0 +1,318 @@
+/* ========== Base Setup ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #222;
+}
+
+#mode-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 30px;
+  background: linear-gradient(to bottom, #ffe1e1, #ffffff);
+}
+
+.hero-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  text-decoration: none;
+  background: #ff5f6d;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #e53935;
+  transform: scale(1.05);
+}
+
+.hero-img {
+  flex: 1;
+  padding: 20px;
+  animation: slideIn 1s ease-in-out;
+}
+
+/* ========== About (Stories) Section ========== */
+.about {
+  padding: 60px 30px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.story-carousel {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.story-card {
+  width: 280px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-10px);
+}
+
+/* ========== Events Section ========== */
+.events {
+  padding: 60px 30px;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  text-align: center;
+  color: #222;
+}
+
+.event-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.event-card {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Learning Zone ========== */
+.learn {
+  padding: 60px 30px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.learn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.learn li {
+  margin: 15px 0;
+}
+
+.learn a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.learn a:hover {
+  color: #e91e63;
+}
+
+/* ========== Join Section ========== */
+.join {
+  padding: 60px 30px;
+  text-align: center;
+  background: #fff3f3;
+}
+
+.join form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.join input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.join button {
+  padding: 12px;
+  background: #f06292;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.join button:hover {
+  background: #ec407a;
+}
+
+/* ========== Footer ========== */
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .socials a {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+footer .socials a:hover {
+  color: #ff4081;
+}
+
+/* ========== Dark Mode ========== */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .navbar {
+  background: #1e1e1e;
+}
+
+body.dark-mode .nav-links li a {
+  color: #ddd;
+}
+
+body.dark-mode .about,
+body.dark-mode .join,
+body.dark-mode .learn {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .event-card,
+body.dark-mode .story-card {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+body.dark-mode .join input,
+body.dark-mode .join button {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes slideIn {
+  0% {transform: translateX(100px); opacity: 0;}
+  100% {transform: translateX(0); opacity: 1;}
+}
+
+/* ========== Responsive ========== */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .event-container,
+  .story-carousel {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
